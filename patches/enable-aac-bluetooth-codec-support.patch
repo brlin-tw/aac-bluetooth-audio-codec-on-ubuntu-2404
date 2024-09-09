@@ -1,0 +1,35 @@
+Enable the AAC bluetooth audio codec support that is disabled in the
+Ubuntu build of pipewire.
+
+SPDX-FileCopyrightText: 2024 林博仁(Buo-ren Lin) <buo.ren.lin@gmail.com>
+SPDX-License-Identifier: CC-BY-SA-4.0+
+
+--- pipewire-1.0.5/debian/control	2024-09-09 17:07:39.081068473 +0800
++++ pipewire-1.0.5.patched/debian/control	2024-09-09 17:07:35.498831344 +0800
+@@ -14,6 +14,7 @@
+                libbluetooth-dev [linux-any],
+                libcamera-dev (>= 0.2.0) [!m68k !hurd-any],
+                libdbus-1-dev,
++               libfdk-aac-dev,
+                libffado-dev,
+                libfreeaptx-dev,
+                libglib2.0-dev,
+@@ -47,7 +48,6 @@
+                pkgconf,
+                python3-docutils,
+                systemd-dev
+-Build-Conflicts: libfdk-aac-dev
+ Standards-Version: 4.6.2
+ Vcs-Browser: https://salsa.debian.org/utopia-team/pipewire
+ Vcs-Git: https://salsa.debian.org/utopia-team/pipewire.git
+--- pipewire-1.0.5/debian/rules	2024-09-09 17:07:39.131071783 +0800
++++ pipewire-1.0.5.patched/debian/rules	2024-09-09 17:07:35.063802547 +0800
+@@ -67,7 +67,7 @@
+ 		-Dauto_features=enabled \
+ 		-Davahi=enabled \
+ 		-Dbluez5-backend-native-mm=enabled \
+-		-Dbluez5-codec-aac=disabled \
++		-Dbluez5-codec-aac=enabled \
+ 		-Dbluez5-codec-aptx=enabled \
+ 		-Dbluez5-codec-lc3=enabled \
+ 		-Dbluez5-codec-lc3plus=disabled \
