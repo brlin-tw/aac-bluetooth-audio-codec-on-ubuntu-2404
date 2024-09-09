@@ -173,7 +173,7 @@ We can mitigate the problem by rebuilding the pipewire packages and linking them
     sudo apt install "${package_files_to_be_installed[@]}"
     ```
 
-1. Run the following commands in the text terminal to restart the pipewire service running in your user seession:
+1. Run the following commands in the text terminal to restart the pipewire service running in your user session:
 
     ```bash
     systemctl_opts=(
