@@ -152,6 +152,10 @@ We can mitigate the problem by rebuilding the pipewire packages and linking them
 1. Install the built packages by running the following commands _as root_ in a text terminal:
 
     ```bash
+    # Avoid filename expansion pattern become the result if the pattern
+    # didn't match any files
+    shopt -s nullglob
+
     built_debian_pkgs=(../*.deb)
     package_files_to_be_installed=()
     for package in "${built_debian_pkgs[@]}"; do
