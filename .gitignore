@@ -88,3 +88,16 @@
 
 # Don't track continuous integration virtual environments
 /continuous-integration/venv/
+
+# Don't track Debian source package assets
+*.dsc
+*.build
+*.buildinfo
+*.changes
+
+# Don't track built Debian packages
+*.deb
+*.ddeb
+
+# Don't track downloaded pipewire source trees
+/pipewire-*/
