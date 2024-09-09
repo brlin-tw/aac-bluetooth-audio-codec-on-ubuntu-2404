@@ -11,7 +11,7 @@ Explains why the AAC audio codec support for bluetooth audio devices isn't avail
 
 [TOC]
 
-## The problem
+## Problem
 
 The AAC audio codec support for bluetooth audio devices isn't available under Ubuntu 24.04 by default:
 
@@ -21,7 +21,7 @@ This is due to the fact that the FDK-AAC package that provides the support [has 
 
 The FDK-AAC package distributed in Ubuntu is in fact [a stripped-down fork](https://gitlab.freedesktop.org/wtaymans/fdk-aac-stripped) that removes features which the related patents aren't expired yet, which, [as far as Fedora concerned](https://lists.fedoraproject.org/archives/list/legal@lists.fedoraproject.org/thread/OVW25JRWOKOLVMW3XGUX7E4OXFUR2RCG/), is considered free from the license incompatibility problems.  However [the package hasn't moved to the main component of the Ubuntu software archive component yet](https://bugs.launchpad.net/ubuntu/+source/fdk-aac-free/+bug/1977614) and as a result, it cannot be linked by the consumer packages(as they are also required to be included in the Ubuntu installation media, which requires all software to be from the `main` and `restricted` software archive components).
 
-## The solution
+## Solution
 
 The following actions may help the bug be resolved:
 
@@ -32,7 +32,7 @@ The following actions may help the bug be resolved:
     + [#1021370 - pipewire: build with bluez5-codec-aac=enabled - Debian Bug report logs](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1021370)
     + [#981285 - Please move fdk-aac to main - Debian Bug report logs](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=981285)
 
-## The workarounds
+## Workarounds
 
 The following are some workarounds that can help mitigate the problem before a proper solution is rolled out:
 
