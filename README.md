@@ -225,6 +225,8 @@ The following external materials are referenced during the writing of this howto
   Explains the usage of the `--no-lintian` command option.
 * The dpkg-buildpackage(1) manual page  
   Explains the usage of the `--build`, the `--unsigned-changes`, and the `--unsigned-source` command options.
+* The apt-mark(8) manual page  
+  Explains how to hold package versions using the `apt-mark hold` command.
 
 ## Licensing
 
