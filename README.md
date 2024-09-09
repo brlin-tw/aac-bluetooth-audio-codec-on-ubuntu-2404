@@ -188,6 +188,25 @@ We can mitigate the problem by rebuilding the pipewire packages and linking them
 
    ![Screenshot of the audio device profile selection interface of the bluetooth audio device after applying the workaround](doc-assets/after.png "Screenshot of the audio device profile selection interface of the bluetooth audio device after applying the workaround")
 
+1. Run the following commands in the text terminal _as root_ to prevent the package to be replaced by system updates:
+
+    ```bash
+    apt-mark hold libspa-0.2-bluetooth
+    ```
+
+   The libspa-0.2-bluetooth package is the one that actually ships the library that provides the AAC bluetooth audio codec support(/usr/lib/x86_64-linux-gnu/spa-0.2/bluez5/libspa-codec-bluez5-aac.so to be specific).
+
+   When new updates are available you'll need to:
+
+    1. Unhold the package by running the following command in a text terminal _as root_:
+
+        ```bash
+        apt-mark unhold libspa-0.2-bluetooth
+        ```
+
+    1. Redo the process to install patched packages against the new Ubuntu version.
+    1. Re-hold the libspa-0.2-bluetooth package using the aforementioned command.
+
 ## References
 
 The following external materials are referenced during the writing of this howto:
