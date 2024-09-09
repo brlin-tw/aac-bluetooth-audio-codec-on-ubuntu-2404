@@ -15,7 +15,7 @@ Explains why the AAC audio codec support for bluetooth audio devices isn't avail
 
 The AAC audio codec support for bluetooth audio devices isn't available under Ubuntu 24.04 by default:
 
-![Screenshot of the audio device profile selection interface of a Bose NC 700 bluetooth headphone, notice that only SBC codecs A2DP profiles are available for selection.](https://hackmd.io/_uploads/SkgNS4i30.png "Screenshot of the audio device profile selection interface of a Bose NC 700 bluetooth headphone, notice that only SBC codecs A2DP profiles are available for selection.")
+![Screenshot of the audio device profile selection interface of a Bose NC 700 bluetooth headphone, notice that only SBC codecs A2DP profiles are available for selection.](doc-assets/before.png "Screenshot of the audio device profile selection interface of a Bose NC 700 bluetooth headphone, notice that only SBC codecs A2DP profiles are available for selection.")
 
 This is due to the fact that the FDK-AAC package that provides the support [has a patent-related clause in their BSD-like custom license](https://fedoraproject.org/wiki/Licensing/FDK-AAC), which makes it incompatible with the licenses of the consumer packages(e.g. PulseAudio/Pipewire) and thus can't be legally distributed when linked(it will considered to be violating license terms at either ends).
 
