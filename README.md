@@ -207,6 +207,55 @@ We can mitigate the problem by rebuilding the pipewire packages and linking them
     1. Redo the process to install patched packages against the new Ubuntu version.
     1. Re-hold the libspa-0.2-bluetooth package using the aforementioned command.
 
+### Install packages that have rebuild the pipewire packages from a third-party PPA software source
+
+Another workaround of this problem is to install pre-built PipeWire packages from [the Pipewire rebuilt with support for more Bluetooth codecs personal package archive(PPA)](https://launchpad.net/~aglasgall/+archive/ubuntu/pipewire-extra-bt-codecs) built by [Anna Glasgall](https://launchpad.net/~aglasgall).
+
+As I am not acquainted with Anna I unable to guarantee that their packages are trustworthy, use it at your own risk(Debian packages have your host's root permission during installation and configuration, thus you shouldn't install packages without a security audit in advance).
+
+The overall process would be:
+
+1. Ensure the `software-properties-common` package is installed by running the following command _as root_ in a text terminal:
+
+    ```bash
+    apt install software-properties-common
+    ```
+
+   This package provides the `add-apt-repository` command which is used to install the PPA software source.
+
+1. Run the following command in the text terminal _as root_ to install [the Pipewire rebuilt with support for more Bluetooth codecs personal package archive(PPA)](https://launchpad.net/~aglasgall/+archive/ubuntu/pipewire-extra-bt-codecs):
+
+    ```bash
+    add-apt-repository ppa:aglasgall/pipewire-extra-bt-codecs
+    ```
+
+1. Run the following command in the text terminal _as root_ to refresh the local cache of the APT package management system:
+
+    ```bash
+    apt update
+    ```
+
+1. Run the following command in the text terminal _as root_ to upgrade the pipewire packages to the versions provided by [the Pipewire rebuilt with support for more Bluetooth codecs personal package archive(PPA)](https://launchpad.net/~aglasgall/+archive/ubuntu/pipewire-extra-bt-codecs):
+
+    ```bash
+    apt upgrade pipewire
+    ```
+
+1. Run the following commands in the text terminal to restart the pipewire service running in your user session:
+
+    ```bash
+    systemctl_opts=(
+        # Talk to the service manager of the calling user, rather than the
+        # service manager of the system
+        --user
+    )
+    systemctl "${systemctl_opts[@]}" restart pipewire
+    ```
+
+1. Try reproduce the problem again, this time the AAC A2DP audio profile should be enumerated in the profile selection interface.
+
+   ![Screenshot of the audio device profile selection interface of the bluetooth audio device after applying the workaround](doc-assets/after.png "Screenshot of the audio device profile selection interface of the bluetooth audio device after applying the workaround")
+
 ## References
 
 The following external materials are referenced during the writing of this howto:
@@ -227,6 +276,8 @@ The following external materials are referenced during the writing of this howto
   Explains the usage of the `--build`, the `--unsigned-changes`, and the `--unsigned-source` command options.
 * The apt-mark(8) manual page  
   Explains how to hold package versions using the `apt-mark hold` command.
+* [Pipewire rebuilt with support for more Bluetooth codecs : Anna Glasgall](https://launchpad.net/~aglasgall/+archive/ubuntu/pipewire-extra-bt-codecs)  
+  Explains the installation procedure of the [Pipewire rebuilt with support for more Bluetooth codecs : Anna Glasgall](https://launchpad.net/~aglasgall/+archive/ubuntu/pipewire-extra-bt-codecs) PPA.
 
 ## Licensing
 
