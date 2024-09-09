@@ -55,7 +55,7 @@ We can mitigate the problem by rebuilding the pipewire packages and linking them
     apt update
     ```
 
-1. Run the following commands to download and extract the Debian packaging source tree of the pipewire package in the text terminal:
+1. Run the following command to download and extract the Debian packaging source tree of the pipewire package in the text terminal:
 
     ```bash
     apt source pipewire
@@ -130,7 +130,7 @@ We can mitigate the problem by rebuilding the pipewire packages and linking them
     sudo apt install ./pipewire-build-deps_*_amd64.deb
     ```
 
-1. Run the following command to build the pipewire binary packages:
+1. Run the following commands to build the pipewire binary packages:
 
     ```bash
     debuild_opts=(
