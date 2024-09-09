@@ -21,6 +21,17 @@ This is due to the fact that the FDK-AAC package that provides the support [has 
 
 The FDK-AAC package distributed in Ubuntu is in fact [a stripped-down fork](https://gitlab.freedesktop.org/wtaymans/fdk-aac-stripped) that removes features which the related patents aren't expired yet, which, [as far as Fedora concerned](https://lists.fedoraproject.org/archives/list/legal@lists.fedoraproject.org/thread/OVW25JRWOKOLVMW3XGUX7E4OXFUR2RCG/), is considered free from the license incompatibility problems.  However [the package hasn't moved to the main component of the Ubuntu software archive component yet](https://bugs.launchpad.net/ubuntu/+source/fdk-aac-free/+bug/1977614) and as a result, it cannot be linked by the consumer packages(as they are also required to be included in the Ubuntu installation media, which requires all software to be from the `main` and `restricted` software archive components).
 
+## The solution
+
+The following actions may help the bug be resolved:
+
+* Vote and subscribe to the following Ubuntu bugs:
+    + [Bug #1991936 “No AAC codec for Pipewire on Ubuntu Kinetic” : Bugs : pipewire package : Ubuntu](https://bugs.launchpad.net/ubuntu/+source/pipewire/+bug/1991936)
+    + [Bug #1977614 “\[MIR\] fdk-aac-free” : Bugs : fdk-aac-free package : Ubuntu](https://bugs.launchpad.net/ubuntu/+source/fdk-aac-free/+bug/1977614)
+* Subscribe to the following Debian bug:
+    + [#1021370 - pipewire: build with bluez5-codec-aac=enabled - Debian Bug report logs](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1021370)
+    + [#981285 - Please move fdk-aac to main - Debian Bug report logs](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=981285)
+
 ## References
 
 The following external materials are referenced during the writing of this howto:
