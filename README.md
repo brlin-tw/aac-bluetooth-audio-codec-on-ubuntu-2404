@@ -43,7 +43,7 @@ We can mitigate the problem by rebuilding the pipewire packages and linking them
 1. Download the release package from [the Releases page](https://gitlab.com/brlin/aac-bluetooth-audio-codec-on-ubuntu-2404/-/releases).
 1. Extract the downloaded release package.
 1. Launch a text terminal application.
-1. Change the working directory to the extracted release package directory by runnint the following commands in the text terminal:
+1. Change the working directory to the extracted release package directory by running the following commands in the text terminal:
 
     ```bash
     cd /path/to/aac-bluetooth-audio-codec-on-ubuntu-2404-X.Y.Z
