@@ -1,6 +1,6 @@
 # How to allow the usage of the AAC audio codec for bluetooth audio devices on Ubuntu 24.04
 
-Explains why the AAC audio codec support for bluetooth audio devices isn't available on a Ubuntu 24.04 system, and how to fix it on your own.
+Explains why the AAC audio codec support for bluetooth audio devices isn't available on a Ubuntu 24.04 system, and how to workaround it on your own.
 
 \#pipewire \#ubuntu \#bluetooth \#a2dp \#fdk-aac
 
