@@ -32,7 +32,7 @@ The following actions may help the bug be resolved:
     + [#1021370 - pipewire: build with bluez5-codec-aac=enabled - Debian Bug report logs](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1021370)
     + [#981285 - Please move fdk-aac to main - Debian Bug report logs](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=981285)
 
-## The workaround
+## The workarounds
 
 The following are some workarounds that can help mitigate the problem before a proper solution is rolled out:
 
