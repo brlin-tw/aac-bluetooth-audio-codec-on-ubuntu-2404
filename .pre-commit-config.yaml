@@ -73,3 +73,14 @@ repos:
           (?ix)^(
             LICENSES/.*
           )$
+
+  - repo: https://github.com/thlorenz/doctoc
+    rev: v2.2.0
+    hooks:
+      - id: doctoc
+        args:
+          # Use GitLab reference syntax
+          - --gitlab
+
+          # Only update documents with existing ToC
+          - --update-only

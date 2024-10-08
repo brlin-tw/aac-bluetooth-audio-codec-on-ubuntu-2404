@@ -9,7 +9,20 @@ Explains why the AAC audio codec support for bluetooth audio devices isn't avail
 <https://gitlab.com/brlin/aac-bluetooth-audio-codec-on-ubuntu-2404>  
 [![The GitLab CI pipeline status badge of the project's `main` branch](https://gitlab.com/brlin/aac-bluetooth-audio-codec-on-ubuntu-2404/badges/main/pipeline.svg?ignore_skipped=true "Click here to check out the comprehensive status of the GitLab CI pipelines")](https://gitlab.com/brlin/aac-bluetooth-audio-codec-on-ubuntu-2404/-/pipelines) [![GitHub Actions workflow status badge](https://github.com/brlin-tw/aac-bluetooth-audio-codec-on-ubuntu-2404/actions/workflows/check-potential-problems.yml/badge.svg "GitHub Actions workflow status")](https://github.com/brlin-tw/aac-bluetooth-audio-codec-on-ubuntu-2404/actions/workflows/check-potential-problems.yml) [![pre-commit enabled badge](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white "This project uses pre-commit to check potential problems")](https://pre-commit.com/) [![REUSE Specification compliance badge](https://api.reuse.software/badge/gitlab.com/brlin/aac-bluetooth-audio-codec-on-ubuntu-2404 "This project complies to the REUSE specification to decrease software licensing costs")](https://api.reuse.software/info/gitlab.com/brlin/aac-bluetooth-audio-codec-on-ubuntu-2404)
 
-[TOC]
+## Table of contents
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Problem](#problem)
+- [Solution](#solution)
+- [Workarounds](#workarounds)
+  - [Rebuild the pipewire packages to link with the FDK-AAC package](#rebuild-the-pipewire-packages-to-link-with-the-fdk-aac-package)
+  - [Install packages that have rebuild the pipewire packages from a third-party PPA software source](#install-packages-that-have-rebuild-the-pipewire-packages-from-a-third-party-ppa-software-source)
+- [References](#references)
+- [Licensing](#licensing)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Problem
 
