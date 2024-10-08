@@ -13,8 +13,7 @@ default: True
 
 # Only allow consistent un-ordered list bullet style(allow alternations
 # in sub-levels)
-ul-style:
-  style: sublist
+ul-style: False
 
 # Only allow 4 spaces as indentation of lists
 ul-indent:

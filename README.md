@@ -17,8 +17,8 @@ Explains why the AAC audio codec support for bluetooth audio devices isn't avail
 - [Problem](#problem)
 - [Solution](#solution)
 - [Workarounds](#workarounds)
-  - [Rebuild the pipewire packages to link with the FDK-AAC package](#rebuild-the-pipewire-packages-to-link-with-the-fdk-aac-package)
-  - [Install packages that have rebuild the pipewire packages from a third-party PPA software source](#install-packages-that-have-rebuild-the-pipewire-packages-from-a-third-party-ppa-software-source)
+    - [Rebuild the pipewire packages to link with the FDK-AAC package](#rebuild-the-pipewire-packages-to-link-with-the-fdk-aac-package)
+    - [Install packages that have rebuild the pipewire packages from a third-party PPA software source](#install-packages-that-have-rebuild-the-pipewire-packages-from-a-third-party-ppa-software-source)
 - [References](#references)
 - [Licensing](#licensing)
 
